@@ -5,4 +5,8 @@ COMMANDS = {
 }
 
 def parse(stream):
-    return [COMMANDS[code] for code in stream.split()]
+    commands = []
+    for token in stream.split():
+        code, _, count = token.partition("*")
+        commands += [COMMANDS[code]] * int(count or 1)
+    return commands
