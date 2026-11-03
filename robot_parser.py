@@ -1,7 +1,16 @@
+
+from enum import Enum
+
+
+class Command(Enum):
+    MOVE_FORWARD = "moveForward"
+    MOVE_BACKWARD = "moveBackward"
+    STOP = "stop"
+
 COMMANDS = {
-    "0X123": "moveForward",
-    "0X789": "moveBackward",
-    "0XABC": "stop",
+    "0X123": Command.MOVE_FORWARD,
+    "0X789": Command.MOVE_BACKWARD,
+    "0XABC": Command.STOP,
 }
 
 def parse(stream):
