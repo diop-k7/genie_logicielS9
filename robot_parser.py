@@ -5,8 +5,7 @@ def parse(hexadecimal_command):
     # Define a mapping of command integers to their corresponding actions
     command_mapping = {
         0x123: ["moveForward"],
-        0x456: ["turnLeft"],
-        0x789: ["turnRight"],
+        0x789: ["moveBackward"],
         0xABC: ["stop"],
         # Add more mappings as needed
     }
