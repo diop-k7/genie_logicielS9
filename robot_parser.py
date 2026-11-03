@@ -5,4 +5,4 @@ COMMANDS = {
 }
 
 def parse(stream):
-    return [COMMANDS[stream]]
+    return [COMMANDS[code] for code in stream.split()]
